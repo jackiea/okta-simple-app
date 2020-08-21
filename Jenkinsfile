@@ -7,10 +7,10 @@ pipeline {
         OKTA_OAUTH2_CLIENT_SECRET    = credentials('OKTA_OAUTH2_CLIENT_SECRET')
     }
 
-    tools {
-        // Install the Maven version configured as "M3" and add it to the path.
-        maven "M3"
-    }
+    // tools {
+    //     // Install the Maven version configured as "M3" and add it to the path.
+    //     maven "M3"
+    // }
 
     stages {
         stage('Build') {
