@@ -1,6 +1,9 @@
 pipeline {
     agent any
 
+    // poll every 15 minutes
+    triggers { pollSCM('H/15 * * * *') }
+
     environment {
         OKTA_OAUTH2_ISSUER           = credentials('OKTA_OAUTH2_ISSUER')
         OKTA_OAUTH2_CLIENT_ID        = credentials('OKTA_OAUTH2_CLIENT_ID')
